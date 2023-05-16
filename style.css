@@ -1,0 +1,132 @@
+
+.c{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.c .slides{
+    height: 100%;
+    width: 500%;
+    display: flex;
+}
+.c .slides > div{
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+}
+.c .slides > div:nth-child(1){
+    background-image: url(game/big/0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.c .slides > div:nth-child(2){
+    background-image: url(game/big/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.c .slides > div:nth-child(3){
+    background-image: url(game/big/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.c .slides > div:nth-child(4){
+    background-image: url(game/big/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.c .slides > div:nth-child(5){
+    background-image: url(game/big/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+input{
+    display: none;
+}
+.content h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgb(78, 71, 71);
+    color: whitesmoke;
+    opacity: 0.5;
+    padding: 20px;
+    font-size: 400%;
+    font-family: arial;
+    transform: translate(-50%,-50%) scale(0);
+    box-shadow: 0 0 5px #333;
+    transition: 0.5s;
+}
+.controls{
+    position: absolute;
+    top: 300px;
+    width: 100%;
+}
+.controls > label{
+    opacity: 1;
+    height: 50px;
+    width: 50px;
+    background: orange;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/*.fa-arrow-left, .fa-arrow-right{
+    font-size: 20px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    margin-left: -33px;
+}
+.fa-arrow-right{
+    float: right;
+    margin-right: -35px;
+}*/
+#r1:checked  ~ .slides > div:nth-child(1){
+    margin-left: 0%;
+}
+#r2:checked  ~ .slides > div:nth-child(1){
+    margin-left: -25%;
+}
+#r3:checked  ~ .slides > div:nth-child(1){
+    margin-left: -100%;
+}
+#r4:checked  ~ .slides > div:nth-child(1){
+    margin-left: -200%;
+}
+#r5:checked  ~ .slides > div:nth-child(1){
+    margin-left: -400%;
+}
+#r1:checked ~ .controls > label:nth-child(2),
+#r2:checked ~ .controls > label:nth-child(3),
+#r3:checked ~ .controls > label:nth-child(4),
+#r4:checked ~ .controls > label:nth-child(5),
+#r5:checked ~ .controls > label:nth-child(1){
+    display: block;
+    float: right;
+    margin: 0 10px 0 0;
+}
+#r1:checked ~ .content h1:nth-child(1),
+#r2:checked ~ .content h1:nth-child(2),
+#r3:checked ~ .content h1:nth-child(3),
+#r4:checked ~ .content h1:nth-child(4),
+#r5:checked ~ .content h1:nth-child(5){
+    transform: translate(-50%,-50%) scale(1);
+}
+#r1:checked ~ .controls > label:nth-child(5),
+#r2:checked ~ .controls > label:nth-child(1),
+#r3:checked ~ .controls > label:nth-child(2),
+#r4:checked ~ .controls > label:nth-child(3),
+#r5:checked ~ .controls > label:nth-child(4){
+    display: block;
+    float: left;
+    margin: 0 0 0 17px;
+}
